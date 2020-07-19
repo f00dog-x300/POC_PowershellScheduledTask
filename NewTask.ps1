@@ -4,7 +4,7 @@
 # Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Testing Scheduled Task" -Description "Executing initial task"
 
 
-$action = New-ScheduledTaskAction -Execute 'Python.exe' -Argument 'C:\Users\steal\Documents\Projects\Powershell\ScheduledTask\hellotest.py'
+$action = New-ScheduledTaskAction -Execute 'Python.exe' -Argument '.\hellotest.py'
 
 $trigger = New-ScheduledTaskTrigger -Once -At 8:50
 
